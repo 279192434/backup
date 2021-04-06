@@ -1,0 +1,28 @@
+#给自动备份脚本加执行权限
+chmod 777 backup.sh
+
+#利用系统crontab实现每天自动运行
+crontab -e
+
+#每天凌晨1点30分执行脚本
+30 01 * * * /root/backup.sh
+
+#重新启动crontab定时服务，使脚本生效
+service crond restart
+
+第一次安装好git客户端后生成密钥文件
+输入以下命令，直接按回车
+ssh-keygen -t rsa -C "email"  # email为你在github上注册的邮箱
+打开root/.ssh，可以看到id_rsa.pub这个文件，复制里面的密钥添加上github服务器上。
+在github界面右上角头像菜单栏里，选择github setting里添加SSH keys
+
+传项目之前在github服务器上先创建一个仓库，然后直接clone仓库到本地，进入本地仓库目录，然后添加要上传的文件
+git clone https://github.com/username/cangku.git
+cd cangku                                #cangku仓库目录
+git add .			#所有文件
+git add README.md  	#单个文件
+git commit -m "上传的文件说明"
+git branch -M main		#执行生效
+git remote add origin git@github.com:username/cangku.git  #链接仓库
+#这里第一次要输入账户名和邮箱
+git push -u origin main	#同步到服务器
