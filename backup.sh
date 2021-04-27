@@ -24,12 +24,21 @@ service mysql start
 # chmod 777 backup.sh
 
 # #利用系统crontab实现每天自动运行
-# crontab -e
+# #安装cron服务
+# yum install -y vixie-cron
+# yum install crontabs
 
+# #把crond服务添加到系统启动项
+# chkconfig crond on
 # #开启定时服务，一般是默认开启的
 # service crond start
+# #检查crontab服务是否启动：
+# #service crond status
+# #查看本机的所有定时任务
+# #tail -f /var/log/cron
+
 # 编辑添加定时任务
-# nano crontab -e
+# crontab -e
 # #每十分钟运行一次脚本
 # */10 * * * *
 # #每天凌晨1点30分执行脚本，把下面的脚本输入到crontab -e里面
