@@ -35,6 +35,11 @@ service mysql start
 # #每天凌晨1点30分执行脚本，把下面的脚本输入到crontab -e里面
 # 30 01 * * * /root/backup.sh
 
+# #第一次执行时，进入root目录
+# cd /root/
+# #clone服务器目录
+# git clone git@github.com:279192434/backup.git
+
 cd /root/backup/
 git add .
 git commit -m "vos数据库备份"
