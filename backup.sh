@@ -39,7 +39,7 @@ service mysql start
 # cd /root/
 # yum install -y git
 # #克隆服务器目录到本地
-# https://github.com/279192434/backup.git
+# git clone https://github.com/279192434/backup.git
 # git clone git@github.com:279192434/backup.git
 
 cd /root/backup/
