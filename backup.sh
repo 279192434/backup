@@ -38,7 +38,7 @@ service mysql start
 # #第一次执行时，进入root目录，安装git，这是默认是centos服务器
 # cd /root/
 # yum install -y git
-# #clone服务器目录
+# #克隆服务器目录到本地
 # git clone https://github.com/279192434/backup.git
 
 cd /root/backup/
