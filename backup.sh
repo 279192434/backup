@@ -35,9 +35,15 @@ service mysql start
 # #每天凌晨1点30分执行脚本，把下面的脚本输入到crontab -e里面
 # 30 01 * * * /root/backup.sh
 
-# #第一次执行时，进入root目录，安装git，这是默认是centos服务器
+# #第一次执行时，进入root目录，安装git，这是默认是centos系统
 # cd /root/
 # yum install -y git
+# #输入以下命令一直回车，email为你在github上注册的邮箱
+# ssh-keygen -t rsa -C "email"
+# #打开当前目录.ssh/文件夹，可以看到id_rsa.pub这个文件
+# nano id_rsa.pub
+# 复制id_rsa.pub里面的密钥
+# 登录github，在github setting里添加到SSH keys
 # #克隆服务器目录到本地
 # git clone https://github.com/279192434/backup.git
 # git clone git@github.com:279192434/backup.git
