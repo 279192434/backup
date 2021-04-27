@@ -79,6 +79,6 @@ iptables -L INPUT -n --line-numbers
 # #开启定时服务，一般是默认开启的
 # service crond start
 # 编辑添加定时任务
-# nano crontab -e
+# crontab -e
 # #每十分钟运行一次脚本,根据脚本放置的目录
 # */10 * * * * /root/mysql-read.sh
