@@ -43,7 +43,7 @@ service mysql start
 # #打开当前目录.ssh/文件夹，可以看到id_rsa.pub这个文件
 # cat id_rsa.pub
 # 复制id_rsa.pub里面的密钥
-# 登录github，在github里选择setting里添加到SSH keys
+# 登录github，在github里选择setting,然后选择SSH and GPG keys再选择New SSH keys，添加密钥保存即可
 # #克隆服务器目录到本地
 # git clone https://github.com/279192434/backup.git
 # git clone git@github.com:279192434/backup.git
