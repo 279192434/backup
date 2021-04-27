@@ -41,7 +41,7 @@ service mysql start
 # #输入以下命令一直回车，email为你在github上注册的邮箱
 # ssh-keygen -t rsa -C "email"
 # #打开当前目录.ssh/文件夹，可以看到id_rsa.pub这个文件
-# nano id_rsa.pub
+# cat id_rsa.pub
 # 复制id_rsa.pub里面的密钥
 # 登录github，在github里选择setting里添加到SSH keys
 # #克隆服务器目录到本地
