@@ -26,6 +26,12 @@ service mysql start
 # #利用系统crontab实现每天自动运行
 # crontab -e
 
+# #开启定时服务，一般是默认开启的
+# service crond start
+# 编辑添加定时任务
+# nano crontab -e
+# #每十分钟运行一次脚本
+# */10 * * * *
 # #每天凌晨1点30分执行脚本，把下面的脚本输入到crontab -e里面
 # 30 01 * * * /root/backup.sh
 
